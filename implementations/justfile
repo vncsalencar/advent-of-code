@@ -1,0 +1,12 @@
+test-all:
+  cargo nextest run
+
+test-all-output:
+  cargo nextest run --failure-output immediate --success-output immediate
+
+test FILENAME:
+  cargo nextest --test FILENAME
+
+test-output FILENAME:
+  cargo nextest --test FILENAME --failure-output immediate --success-output immediate
+
