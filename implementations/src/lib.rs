@@ -1,14 +1,8 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
-}
+#![allow(dead_code)]
+use std::fs;
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+mod day1;
 
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
+pub fn get_input(filename: &str) -> String {
+    fs::read_to_string(format!("input/{filename}")).expect(&format!("Missing input/{filename}")).trim().to_string()
 }
