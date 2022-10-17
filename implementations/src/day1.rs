@@ -2,8 +2,10 @@ fn part1() -> isize {
     let input = super::get_input("day1");
 
     input.chars().fold(0, |acc, cur| -> isize {
-        if cur == '(' { return acc + 1 }
-        acc - 1 
+        if cur == '(' {
+            return acc + 1;
+        }
+        acc - 1
     })
 }
 
@@ -15,7 +17,9 @@ fn part2() -> isize {
 
     loop {
         let next = chars.next();
-        if next.is_none() { break };
+        if next.is_none() {
+            break;
+        };
         position += 1;
 
         floor += if next.unwrap() == '(' { 1 } else { -1 };
@@ -42,5 +46,4 @@ mod not_quite_lisp {
         let answer = super::part2();
         assert!(answer == 1795);
     }
-
 }
