@@ -3,6 +3,7 @@ use std::fs;
 
 mod day1;
 mod day2;
+mod day3;
 
 pub fn get_input(filename: &str) -> String {
     fs::read_to_string(format!("input/{filename}"))
