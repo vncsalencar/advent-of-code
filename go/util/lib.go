@@ -5,8 +5,8 @@ import (
 	"strings"
 )
 
-func GetInput(filename string) string {
-	path := "./input/" + filename
+func GetInput() string {
+	path := "./input.txt"
 	file, err := ioutil.ReadFile(path)
 
 	if err != nil {

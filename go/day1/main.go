@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	input := util.GetInput("day1")
+	input := util.GetInput()
 	lines := strings.Split(input, "\n")
 
 	index := 0
@@ -33,6 +33,7 @@ func main() {
 		}
 	}
 
+	fmt.Println("# Day 1: Calorie Counting")
 	fmt.Println("Part 1 =", biggest)
 	sort.Slice(elves, func(i, j int) bool { return elves[i] > elves[j] })
 
